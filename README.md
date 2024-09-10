@@ -15,13 +15,15 @@
  
 ## Introduction
 
-The client for this project is a large retailer based in the United States. The company has identified issues in its warehouse operations, leading to losses and stock-outs for several products. The objective is to implement a forecasting model using artificial intelligence algorithms to predict the appropriate stock levels for at least the next 8 days. This initiative aims to enhance operational efficiency and increase the company’s profitability.
+The client for this project is a neobank specializing in offering competitively priced loans. However, the company is concerned about the quality of borrowers accessing their products. They require a robust system to assist in making informed loan approval decisions based on applicants’ profiles.
+
+The goal is to implement a risk-scoring model using artificial intelligence algorithms to identify ‘risky’ applicants and estimate their associated expected losses. This information will be used to manage the bank’s economic capital, portfolio, and risk assessment effectively.
 
  * [See a technical explanation of the project here](https://pabloelt.github.io/project/project7/)
 
 ## Objectives
 
-The primary objective is to develop a forecasting model utilizing a set of machine learning algorithms to predict sales for the next 8 days at the store-product level. These algorithms are trained using the extensive three-year history available in the retail company’s SQL database, employing massive modeling techniques to ensure accuracy and reliability.
+The main objective is to develop a risk-scoring model using machine learning algorithms to predict potentially risky borrowers. This model will estimate the expected financial loss for each new customer-loan pairing, based on the company’s historical data. By leveraging this advanced analytical tool, the company’s performance will be significantly enhanced.
 
 ## Project results
 
@@ -29,15 +31,13 @@ The primary objective is to develop a forecasting model utilizing a set of machi
 
 Several insights have been uncovered through the exploratory data analysis. The main actionable initiatives are summarized below.
 
-1. With the current information collected by the company, it is challenging to determine whether intermittent demand is due to stock-outs or simply zero demand for the product. Therefore, it is highly recommended to track warehouse data closely.
+1. Credit scores appear to be effective in identifying high-quality borrowers. These profiles should be targeted for promotion, and a broader range of products, such as investment opportunities, stocks, and index funds, could be offered to them.
 
-2. To optimize sales and reduce warehouse costs, implementing a forecasting model based on machine learning algorithms can be highly effective. A bottom-up approach, starting at the product level, is particularly recommended in this context.
+2. The job title category needs improvement to provide more accurate information, which will be beneficial for the development of the machine learning algorithms.
 
-3. Discounts have proven to be quite successful, especially for product 090, which is the top seller. It may be worthwhile to apply this strategy to other products and evaluate the overall impact.
+3. Since three main borrower profiles have been identified based on credit card usage, targeted campaigns can be developed for each group. Customized products or loans tailored to their specific needs could be offered to them.
 
-4. Saturdays and Sundays show the highest sales volumes, presenting an opportunity to develop targeted strategies and campaigns.
-
-5. Special days like Thanksgiving, Labor Day, and Easter generate significant sales. These occasions should be thoroughly analyzed, and marketing strategies should be developed to enhance the company’s profitability.
+4. According to the company’s historical data, 30-month loans are performing better. These should be promoted, and additional products in this category could be considered.
 
 
 ### Sales forecasting model
