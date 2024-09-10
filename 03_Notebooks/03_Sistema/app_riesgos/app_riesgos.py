@@ -174,7 +174,6 @@ if calculate_button:
 
     # OUTPUTS:
 
-    #col1,col2,col3,col4 = st.columns([1.7,1,1,1])
     col1,col2,col3,col4,col5,col6 = st.columns([0.5,3,1.5,1.5,1.5,1])
     with col2:
         liquidfill_option = {
