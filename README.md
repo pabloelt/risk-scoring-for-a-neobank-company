@@ -7,7 +7,8 @@
 * [Objectives](#objectives)
 * [Project results](#project-results)
    * [Recommended actions from EDA](#recommended-actions-from-eda)
-   * [Sales forecasting model](#sales-forecasting-model)
+   * [Risk scoring model](#risk-scoring-model)
+   * [Risk scoring analyzer web app](#risk-scoring-analyzer-web-app)
 * [Project structure](#project-structure)
 * [Instructions](#instructions)
 
@@ -48,22 +49,23 @@ In this project, we have developed a risk-scoring model to predict the Expected 
 * **Exposure at Default (EAD):** This indicates the amount of outstanding debt at the time of default.
 * **Loss Given Default (LGD):** This metric represents the percentage of the loan exposure that is not expected to be recovered if a default occurs.
 
-To estimate these risk parameters, three predictive machine learning models are developed. For the PD model, a logistic regression algorithm is used since high interpretability and auditability are required at this stage in the financial sector. On the other hand, for estimating the EAD and LGD models a LightGBM algorithm is finally selected due to its superior performance. The predictions from these models are then combined to calculate the EL for each loan transaction. To calculate this value, the following formula is applied:
+To estimate these risk parameters, three predictive machine learning models are developed. For the PD model, a logistic regression algorithm is used since high interpretability and auditability are required at this stage in the financial sector. On the other hand, for estimating the EAD and LGD models LightGBM algorithms are finally selected due to their superior performance. The predictions from these models are then combined to calculate the EL for each loan transaction. To calculate this value, the following formula is applied:
 
 $$
-EL[\$] = PD \cdot P[\textdollar] \cdot EAD \cdot LDG,
+EL[\textdollar] = PD \cdot P[\textdollar] \cdot EAD \cdot LDG,
 $$
 
 where P is the loan principal, i.e., the amount of money the borrower whises to apply for.
 
+### Risk scoring analyzer web app
 
-a first one for the Probability of Default (PD), a second one for the Exposure at Default (EAD), and a third one for the Loss Given Default (LGD). A logistic regression algorithm is used to create the PD model since high interpretability and auditability are required in the financial sector. On the other hand, for estimating the EAD and LGD models a LightGBM algorithm is finally selected due to its superior performance.
+To maximize the value of the developed machine learning models, it is essential to seamlessly deploy them into production so that employees can start utilizing them to make informed, practical decisions.
 
+To achieve this, a prototype web application has been designed. This web app gathers internal data from the company for each client, as well as information provided by the borrower through their loan application.
 
-robust recursive forecasting model based on a set of machine learning algorithms for sales prediction. This model analyzes each product-store combination individually and tailors the algorithm to predict demand for the next 8 days. LightGBM, with standard hyperparameters, was identified as the best option for predictive performance. The model was tested with new data from December 2015, yielding satisfactory results, with a mean absolute error of approximately 4.73.
+[Launch Risk Scoring Analyzer Web App!](https://risk-scoring-analyzer-web-app.streamlit.app/)
 
-This forecasting model will help to reduce warehouse costs and stock-outs, significantly boosting the company's performance and profitability.
-
+![featured](https://github.com/pabloelt/risk-scoring-for-a-neobank-company//blob/main/00_Imagenes/web_app_1.png?raw=true)
 
 ## Project structure
 
@@ -108,8 +110,8 @@ This forecasting model will help to reduce warehouse costs and stock-outs, signi
 
 The project should be run using the same environment in which it was created.
 
-* Project environment can be replicated using the <mark>retail.yml</mark> file, which was created during the set up phase of the project. It can be found in the folder <mark>01_Documentos</mark>.
-* To replicate the environment it is necessary to copy the <mark>retail.yml</mark> file to the directory and use the terminal or anaconda prompt executing:
-  * conda env create --file leadscoring.yml --name project_name
+* Project environment can be replicated using the <mark>riesgos.yml</mark> file, which was created during the set up phase of the project. It can be found in the folder <mark>01_Documentos</mark>.
+* To replicate the environment it is necessary to copy the <mark>riesgos.yml</mark> file to the directory and use the terminal or anaconda prompt executing:
+  * conda env create --file riesgos.yml --name project_name
 
 On the other hand, remember to update the project_path variable of the notebooks to the path where you have replicated the project.
