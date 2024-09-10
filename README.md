@@ -90,10 +90,13 @@ To achieve this, a prototype web application has been designed. This web app gat
       * <mark>03_EDA.ipynb</mark>: Notebook used for the execution of the exploratory data analysis.
       * <mark>04_Transformacion de datos.ipynb</mark>: Notebook that details and executes the data transformation processes necessary to prepare the variables for the models.
       * <mark>05_Modelizacion Clasificacion PD.ipynb</mark>: Notebook used for modeling the predictive Probability of Default model. It contains the model selection, the hyperparametrization, and the evaluation of results.
-      * <mark>06_Modelizacion para Regresion.ipynb</mark>: Notebook for modeling the predictive forecasting model. It contains the model selection, the hyperparametrization, the selection of the optimal discrimination threshold, and the evaluation of results.
-      * <mark>07_Preparacion del codigo de produccion.ipynb</mark>: Notebook used to compile all the quality, transformation, and variable selection processes, as well as the final model and execution and retraining processes. It is used to create the final retraining and execution pipes that condense all the aforementioned processes.
-      * 📁 03_Sistema
-      * This folder contains the files (app script, production script, models, functions ...) used in the model's deployment. 
+      * <mark>06_Modelizacion para Regresion EAD.ipynb</mark>: Notebook for modeling the predictive Exposure at Default model. It contains the model selection, the hyperparametrization, and the evaluation of results.
+      * <mark>07_Modelizacion para Regresion LGD.ipynb</mark>: Notebook for modeling the predictive Loss Given default model. It contains the model selection, the hyperparametrization, and the evaluation of results.
+      * <mark>08_Preparacion del codigo de produccion.ipynb</mark>: Notebook used to compile all the quality, transformation, and variable selection processes, as well as the final model and execution and retraining processes. It is used to create the final retraining and execution pipes that condense all the aforementioned processes.
+    * 📁 03_Sistema
+      * This folder contains the files (production script, models, functions ...) used in the model's deployment.
+      * 📁 app_riesgos
+        * This folder contains the app files necessary for the deployment of the web application [Risk Scoring Analyzer](https://risk-scoring-analyzer-web-app.streamlit.app/).    
 * 📁 04_Modelos
   * <mark>lista_modelos_retail.pickle</mark>: File containing all of the developed models for each product-store combination.
   * <mark>ohe_retail.pickle</mark>: File containing the one hot encoding pipe.
