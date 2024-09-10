@@ -89,3 +89,9 @@ This forecasting model will help to reduce warehouse costs and stock-outs, signi
 ## Instructions
 
 The project should be run using the same environment in which it was created.
+
+* Project environment can be replicated using the <mark>retail.yml</mark> file, which was created during the set up phase of the project. It can be found in the folder <mark>01_Documentos</mark>.
+* To replicate the environment it is necessary to copy the <mark>retail.yml</mark> file to the directory and use the terminal or anaconda prompt executing:
+  * conda env create --file leadscoring.yml --name project_name
+
+On the other hand, remember to update the project_path variable of the notebooks to the path where you have replicated the project.
