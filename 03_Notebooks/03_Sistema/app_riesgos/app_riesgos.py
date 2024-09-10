@@ -176,7 +176,7 @@ if calculate_button:
 
     #col1,col2,col3,col4 = st.columns([1.7,1,1,1])
     col1,col2,col3,col4,col5,col6 = st.columns([1,2,2,2,2,1])
-    with col1:
+    with col2:
         liquidfill_option = {
             "series": [{"type": "liquidFill",
                         "data": [{"name": 'EL',
@@ -211,7 +211,7 @@ if calculate_button:
         st_echarts(liquidfill_option, width='100%', height='450%', key=0)
         st.markdown("<p style='text-align: center; color: #FFF; font-size: 1em; font-weight: bold;'>Opening comission to cover Expected Loss</p>", unsafe_allow_html=True)
 
-    with col2:
+    with col3:
         liquidfill_option = {
         "series": [{
             "type": 'liquidFill',
@@ -245,7 +245,7 @@ if calculate_button:
         st_echarts(options=liquidfill_option, width="100%", height="450%", key=1)
         st.markdown("<p style='text-align: center; color: #FFF; font-size: 1em; font-weight: bold;'>Probability of Default</p>", unsafe_allow_html=True)
 
-    with col3:
+    with col4:
         liquidfill_option = {
         "series": [{
             "type": 'liquidFill',
@@ -279,7 +279,7 @@ if calculate_button:
         st_echarts(options=liquidfill_option, width="100%", height="450%", key=2)
         st.markdown("<p style='text-align: center; color: #FFF; font-size: 1em; font-weight: bold;'>Exposure at Default</p>", unsafe_allow_html=True)
 
-    with col4:
+    with col5:
         liquidfill_option = {
         "series": [{
             "type": 'liquidFill',
