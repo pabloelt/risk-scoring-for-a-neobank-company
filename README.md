@@ -69,6 +69,8 @@ To achieve this, a prototype web application has been designed. This web app gat
 
 ## Project structure
 
+* 📁 .streamlit
+  * <mark>config.toml</mark>: File containing some configuration parameters for the [Risk Scoring Analyzer](https://risk-scoring-analyzer-web-app.streamlit.app/) web app.
 * 📁 00_Imagenes: Contains project images.
 * 📁 01_Documentos: Contains basic project files:
   * <mark>Diccionario.xlsx</mark>: Feature-level metadata.
