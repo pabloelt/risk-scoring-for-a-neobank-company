@@ -175,7 +175,7 @@ if calculate_button:
     # OUTPUTS:
 
     #col1,col2,col3,col4 = st.columns([1.7,1,1,1])
-    col1,col2,col3,col4,col5,col6 = st.columns([0.5,3.5,1.67,1.67,1.67,1.1])
+    col1,col2,col3,col4,col5,col6 = st.columns([0.5,3,1.5,1.5,1.5,1])
     with col2:
         liquidfill_option = {
             "series": [{"type": "liquidFill",
@@ -208,7 +208,7 @@ if calculate_button:
                         "formatter": EL}
                         }
 
-        st_echarts(liquidfill_option, width='100%', height='450%', key=0)
+        st_echarts(liquidfill_option, width='100%', height='400%', key=0)
         st.markdown("<p style='text-align: center; color: #FFF; font-size: 1em; font-weight: bold;'>Opening comission to cover Expected Loss</p>", unsafe_allow_html=True)
 
     with col3:
@@ -242,7 +242,7 @@ if calculate_button:
                     "formatter": PD}
                     }
     
-        st_echarts(options=liquidfill_option, width="100%", height="450%", key=1)
+        st_echarts(options=liquidfill_option, width="100%", height="400%", key=1)
         st.markdown("<p style='text-align: center; color: #FFF; font-size: 1em; font-weight: bold;'>Probability of Default</p>", unsafe_allow_html=True)
 
     with col4:
@@ -276,7 +276,7 @@ if calculate_button:
                     "formatter": EAD}
                     }
     
-        st_echarts(options=liquidfill_option, width="100%", height="450%", key=2)
+        st_echarts(options=liquidfill_option, width="100%", height="400%", key=2)
         st.markdown("<p style='text-align: center; color: #FFF; font-size: 1em; font-weight: bold;'>Exposure at Default</p>", unsafe_allow_html=True)
 
     with col5:
@@ -309,6 +309,6 @@ if calculate_button:
                     "formatter": LGD}
                     }
     
-        st_echarts(options=liquidfill_option, width="100%", height="450%", key=3)
+        st_echarts(options=liquidfill_option, width="100%", height="400%", key=3)
         st.markdown("<p style='text-align: center; color: #FFF; font-size: 1em; font-weight: bold;'>Loss Given Default</p>", unsafe_allow_html=True) 
         
