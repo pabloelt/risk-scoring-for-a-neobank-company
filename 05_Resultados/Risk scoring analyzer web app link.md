@@ -1,1 +1,1 @@
-https://risk-scoring-analyzer-web-app-link.streamlit.app/
+https://risk-scoring-analyzer-web-app.streamlit.app/
