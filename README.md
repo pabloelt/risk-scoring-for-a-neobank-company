@@ -51,7 +51,7 @@ In this project, we have developed a risk-scoring model to predict the Expected 
 To estimate these risk parameters, three predictive machine learning models are developed. For the PD model, a logistic regression algorithm is used since high interpretability and auditability are required at this stage in the financial sector. On the other hand, for estimating the EAD and LGD models a LightGBM algorithm is finally selected due to its superior performance. The predictions from these models are then combined to calculate the EL for each loan transaction. To calculate this value, the following formula is applied:
 
 $$
-EL[$] = PD \cdot P[$] \cdot EAD \cdot LDG,
+EL[\$] = PD \cdot P[\textdollar] \cdot EAD \cdot LDG,
 $$
 
 where P is the loan principal, i.e., the amount of money the borrower whises to apply for.
