@@ -1,13 +1,21 @@
 from codigo_de_ejecucion import *
 import streamlit as st
 from streamlit_echarts import st_echarts
+from PIL import Image
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+# LOADING IMAGES
+
+im_sidebar = Image.open('03_Notebooks/03_Sistema/app_riesgos/featured.jpg')
+im_title = Image.open('03_Notebooks/03_Sistema/app_riesgos/logo_app.png')
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
 
 # PAGE CONFIGURATION
 st.set_page_config(
      page_title = 'Risk Scoring Analyzer',
-     page_icon = 'icon.png',
+     page_icon = '03_Notebooks/03_Sistema/app_riesgos/icon.png',
      layout = 'wide',
      initial_sidebar_state = "expanded",
      menu_items={
@@ -22,7 +30,7 @@ st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', uns
 
 # SIDEBAR
 with st.sidebar:
-    st.image('featured.jpg')
+    st.image(im_sidebar)
     st.markdown('')
 
     # Botones
@@ -54,7 +62,7 @@ with st.sidebar:
 # Title image
 col1, col2, col3 = st.columns([1,8,1])
 with col2:
-    st.image('logo_app.png')
+    st.image(im_title)
 
 placeholder = st.empty()
 
