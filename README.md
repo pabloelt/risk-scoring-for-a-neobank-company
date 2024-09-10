@@ -1,4 +1,4 @@
-# Sales Forecasting for a Retail Company
+# Risk Scoring for a Neobank Company
 
 ![featured](https://github.com/pabloelt/risk-scoring-for-a-neobank-company//blob/main/00_Imagenes/featured.jpg?raw=true)
 
@@ -40,9 +40,27 @@ Several insights have been uncovered through the exploratory data analysis. The 
 4. According to the company’s historical data, 30-month loans are performing better. These should be promoted, and additional products in this category could be considered.
 
 
-### Sales forecasting model
+### Risk scoring model
 
-In this project, we have developed a robust recursive forecasting model based on a set of machine learning algorithms for sales prediction. This model analyzes each product-store combination individually and tailors the algorithm to predict demand for the next 8 days. LightGBM, with standard hyperparameters, was identified as the best option for predictive performance. The model was tested with new data from December 2015, yielding satisfactory results, with a mean absolute error of approximately 4.73.
+In this project, we have developed a risk-scoring model to predict the Expected Loss (EL) associated with a new loan application. To achieve that, three key risk parameters are considered:
+
+* **Probability of Default (PD):** This measures the likelihood that a borrower will default, based on an internally assigned credit rating.
+* **Exposure at Default (EAD):** This indicates the amount of outstanding debt at the time of default.
+* **Loss Given Default (LGD):** This metric represents the percentage of the loan exposure that is not expected to be recovered if a default occurs.
+
+To estimate these risk parameters, three predictive machine learning models are developed. For the PD model, a logistic regression algorithm is used since high interpretability and auditability are required at this stage in the financial sector. On the other hand, for estimating the EAD and LGD models a LightGBM algorithm is finally selected due to its superior performance. The predictions from these models are then combined to calculate the EL for each loan transaction. To calculate this value, the following formula is applied:
+
+$$
+EL[$] = PD \cdot P[$] \cdot EAD \cdot LDG,
+$$
+
+where P is the loan principal, i.e., the amount of money the borrower whises to apply for.
+
+
+a first one for the Probability of Default (PD), a second one for the Exposure at Default (EAD), and a third one for the Loss Given Default (LGD). A logistic regression algorithm is used to create the PD model since high interpretability and auditability are required in the financial sector. On the other hand, for estimating the EAD and LGD models a LightGBM algorithm is finally selected due to its superior performance.
+
+
+robust recursive forecasting model based on a set of machine learning algorithms for sales prediction. This model analyzes each product-store combination individually and tailors the algorithm to predict demand for the next 8 days. LightGBM, with standard hyperparameters, was identified as the best option for predictive performance. The model was tested with new data from December 2015, yielding satisfactory results, with a mean absolute error of approximately 4.73.
 
 This forecasting model will help to reduce warehouse costs and stock-outs, significantly boosting the company's performance and profitability.
 
