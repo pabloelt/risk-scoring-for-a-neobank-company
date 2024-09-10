@@ -98,15 +98,16 @@ To achieve this, a prototype web application has been designed. This web app gat
       * 📁 app_riesgos
         * This folder contains the app files necessary for the deployment of the web application [Risk Scoring Analyzer](https://risk-scoring-analyzer-web-app.streamlit.app/).    
 * 📁 04_Modelos
-  * <mark>lista_modelos_retail.pickle</mark>: File containing all of the developed models for each product-store combination.
-  * <mark>ohe_retail.pickle</mark>: File containing the one hot encoding pipe.
-  * <mark>te_retail.pickle</mark>: File containing the target encoding pipe.
+  * <mark>pipe_ejecucion_pd.pickle</mark>: Pipe that condenses the final PD trained model as well as all necessary prior data transformations.
+  * <mark>pipe_ejecucion_ead.pickle</mark>: Pipe that condenses the final EAD trained model as well as all necessary prior data transformations.
+  * <mark>pipe_ejecucion_lgd.pickle</mark>: Pipe that condenses the final LGD trained model as well as all necessary prior data transformations.
+  * <mark>pipe_entrenamiento_pd.pickle</mark>: Pipe that condenses the entire PD model training process. It can be used to retrain the model with new data when necessary.
+  * <mark>pipe_entrenamiento_ead.pickle</mark>: Pipe that condenses the entire EAD model training process. It can be used to retrain the model with new data when necessary.
+  * <mark>pipe_entrenamiento_lgd.pickle</mark>: Pipe that condenses the entire LGD model training process. It can be used to retrain the model with new data when necessary.
 * 📁 05_Resultados
-  * <mark>FuncionesRetail.py</mark>: Python script that contains all custom functions needed when training or executing the model.
   * <mark>Codigo de ejecucion.py</mark>: Python script to execute the model and obtain the results.
   * <mark>Codigo de reentrenamiento.py</mark>: Python script to retrain the model with new data when necessary.
-  * <mark>lista_modelos_retail.pickle</mark>: File containing all of the developed models for each product-store combination.
-  * <mark>variables_finales.pickle</mark>: Names of the final selected variables after training.
+  * <mark>Risk scoring analyzer web app link.md</mark>: File containing the link for the [Risk Scoring Analyzer](https://risk-scoring-analyzer-web-app.streamlit.app/) web app.
 
 ## Instructions
 
