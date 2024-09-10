@@ -174,7 +174,8 @@ if calculate_button:
 
     # OUTPUTS:
 
-    col1,col2,col3,col4 = st.columns([1.7,1,1,1])
+    #col1,col2,col3,col4 = st.columns([1.7,1,1,1])
+    col1,col2,col3,col4,col5,col6 = st.columns([1,2,2,2,2,1])
     with col1:
         liquidfill_option = {
             "series": [{"type": "liquidFill",
